@@ -39,7 +39,3 @@ store.dispatch({ type: ACTIONS.INCREMENT });
 store.dispatch({ type: ACTIONS.DECREMENT });
 store.dispatch({ type: ACTIONS.INCREASE_BY, payload: 10 });
 store.dispatch({ type: ACTIONS.DECREASE_BY, payload: 5 });
-
-setTimeout(() => {
-  store.dispatch({ type: ACTIONS.DECREMENT });
-}, 4000);
