@@ -64,7 +64,5 @@ export default function cartReducer(originalState = [], action) {
           state.splice(existingItemIndex, 1);
         }
     }
-
-    return state;
   });
 }
