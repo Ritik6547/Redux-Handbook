@@ -1,13 +1,13 @@
 import { useSelector } from "react-redux";
 import CartItem from "../components/CartItem";
 import {
-  getAllCartItems,
   getCartError,
   getCartLoadingState,
+  getDetailedCartItems,
 } from "../store/slices/cartSlice";
 
 export default function Cart() {
-  const cartItems = useSelector(getAllCartItems);
+  const cartItems = useSelector(getDetailedCartItems);
   const isLoading = useSelector(getCartLoadingState);
   const error = useSelector(getCartError);
 

@@ -52,9 +52,9 @@ const cartSlice = createSlice({
   },
 });
 
-const cartItems = (state) => state.cartItems.list;
-export const getAllCartItems = createSelector(
-  [getAllProducts, cartItems],
+export const getCartItems = (state) => state.cartItems.list;
+export const getDetailedCartItems = createSelector(
+  [getAllProducts, getCartItems],
   (products, cartItems) => {
     return cartItems
       .map((item) => {

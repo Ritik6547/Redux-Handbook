@@ -10,11 +10,12 @@ import {
 import {
   fetchCartItems,
   fetchCartItemsError,
+  getCartItems,
   loadCartItems,
 } from "../store/slices/cartSlice";
 
 export default function Header() {
-  const cartItems = useSelector((state) => state.cartItems.list);
+  const cartItems = useSelector(getCartItems);
   const dispatch = useDispatch();
 
   useEffect(() => {
